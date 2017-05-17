@@ -250,3 +250,103 @@ test
 adfskl
 adfa
 Mike-Hungde-MacBook-Pro:Desktop mikehung$ 
+Mike-Hungde-MacBook-Pro:Desktop mikehung$ pwd
+/Users/mikehung/Desktop
+Mike-Hungde-MacBook-Pro:Desktop mikehung$ git clone https://github.com/km0518102/TestProject2017.git
+Cloning into 'TestProject2017'...
+remote: Counting objects: 28, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 28 (delta 6), reused 28 (delta 6), pack-reused 0
+Unpacking objects: 100% (28/28), done.
+Mike-Hungde-MacBook-Pro:Desktop mikehung$ ls
+MyGit			TestProject2017		blue_octocat.txt	octocat.txt		red_octocat.txt
+Mike-Hungde-MacBook-Pro:Desktop mikehung$ cd TestProject2017/
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ open .
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ echo 123 > lyhcod.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ ls -al
+total 16
+drwxr-xr-x   5 mikehung  staff  170  5 17 19:20 .
+drwx------+ 10 mikehung  staff  340  5 17 19:19 ..
+drwxr-xr-x  12 mikehung  staff  408  5 17 19:19 .git
+-rw-r--r--   1 mikehung  staff  118  5 17 19:19 README.md
+-rw-r--r--   1 mikehung  staff    4  5 17 19:20 lyhcod.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git add lyhcod.txt 
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git commit -m 'add my file'
+[master ac341ec] add my file
+ Committer: Mike Hung <mikehung@Mike-Hungde-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lyhcod.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/km0518102/TestProject2017.git
+   e4f1c68..ac341ec  master -> master
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git log
+commit ac341ec690877221a145acda2861318d9d0aee30
+Author: Mike Hung <mikehung@Mike-Hungde-MacBook-Pro.local>
+Date:   Wed May 17 19:21:22 2017 +0800
+
+    add my file
+
+commit e4f1c682c573234e98a559a743701d30c93d7a7f
+Author: Kyle Lin <lyhcode@gmail.com>
+Date:   Wed Apr 26 20:31:35 2017 +0800
+
+    增加標題文字
+
+commit 83c11988baef0715a0cf2bf923718357e50d9b76
+Author: Kyle Lin <lyhcode@gmail.com>
+Date:   Wed Apr 26 20:20:52 2017 +0800
+
+    Initial commit
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ echo 123 > km0518102.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ ls -all
+total 24
+drwxr-xr-x   6 mikehung  staff  204  5 17 19:24 .
+drwx------+ 10 mikehung  staff  340  5 17 19:19 ..
+drwxr-xr-x  13 mikehung  staff  442  5 17 19:21 .git
+-rw-r--r--   1 mikehung  staff  118  5 17 19:19 README.md
+-rw-r--r--   1 mikehung  staff    4  5 17 19:24 km0518102.txt
+-rw-r--r--   1 mikehung  staff    4  5 17 19:20 lyhcod.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git add km0518102.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git commit -m 'add my file'
+[master 25fd701] add my file
+ Committer: Mike Hung <mikehung@Mike-Hungde-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 km0518102.txt
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ git push origin master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 296 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/km0518102/TestProject2017.git
+   ac341ec..25fd701  master -> master
+Mike-Hungde-MacBook-Pro:TestProject2017 mikehung$ 
